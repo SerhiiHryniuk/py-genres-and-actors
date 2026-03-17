@@ -17,6 +17,7 @@ def main() -> QuerySet:
               ("Jaden", "Smith"),
               ("Scarlett", "Johansson")
               ]
+
     for first_name, last_name in actors:
         Actor.objects.create(first_name=first_name, last_name=last_name)
 
@@ -28,6 +29,7 @@ def main() -> QuerySet:
     ).update(
         last_name="Clooney"
     )
+
     Actor.objects.filter(
         first_name="Kianu",
         last_name="Reaves"
